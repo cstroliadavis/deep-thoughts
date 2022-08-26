@@ -1,0 +1,18 @@
+{
+  "name": "deep-thoughts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently -n server,client \"cd server && pnpm run watch\" \"cd client && pnpm start\"",
+    "install": "cd server && pnpm i && cd ../client && pnpm i",
+    "seed": "cd server && pnpm run seed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
