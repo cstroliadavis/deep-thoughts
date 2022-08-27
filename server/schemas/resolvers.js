@@ -54,7 +54,7 @@ exports.Mutation = {
 
   addReaction: requiresLogin
   (
-    (parent, { thoughtId, reactionBody }, context) => Thought.findOneAndUpdate(
+    async (parent, { thoughtId, reactionBody }, context) => await Thought.findOneAndUpdate(
       { _id: thoughtId },
       { $push: { reactions: { reactionBody, username: context.user.username } } },
       { new: true, runValidators: true }
