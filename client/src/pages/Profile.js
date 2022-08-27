@@ -3,6 +3,7 @@ import { useQuery, useMutation } from '@apollo/client';
 
 import auth from '../utils/auth';
 import FriendList from '../components/FriendList';
+import ThoughtForm from '../components/ThoughtForm';
 import ThoughtList from '../components/ThoughtList';
 
 import { ADD_FRIEND } from '../utils/mutations';
@@ -71,6 +72,7 @@ export default () => {
           />
         </div>
       </div>
+      <div className="mb-3">{!userParam && <ThoughtForm />}</div>
     </div>
   );
 };
