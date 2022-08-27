@@ -5,7 +5,7 @@ import FriendList from '../components/FriendList';
 import ThoughtForm from '../components/ThoughtForm';
 import ThoughtList from "../components/ThoughtList";
 
-export default () => {
+const Home = () => {
   const loggedIn = auth.loggedIn();
   const { loading, data } = useQuery(QUERY_THOUGHTS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
@@ -40,3 +40,5 @@ export default () => {
     </main>
   );
 };
+
+export default Home;

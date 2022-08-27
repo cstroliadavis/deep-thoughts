@@ -6,7 +6,7 @@ import auth from '../utils/auth';
 import ReactionList from '../components/ReactionList';
 import ReactionForm from '../components/ReactionForm';
 
-export default () => {
+const SingleThought = () => {
   const { id: thoughtId } = useParams();
 
   const { loading, data } = useQuery(QUERY_THOUGHT, { variables: { id: thoughtId } });
@@ -36,3 +36,5 @@ export default () => {
     </div>
   );
 };
+
+export default SingleThought;

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default (props) => {
+const ReactionList = (props) => {
   const reactions = props.reactions.reduce((acc, reaction) => {
     if (acc.some(({ _id }) => _id===reaction._id)) {
       return acc;
@@ -27,3 +27,5 @@ export default (props) => {
     </div>
   );
 };
+
+export default ReactionList;

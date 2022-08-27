@@ -9,7 +9,7 @@ import ThoughtList from '../components/ThoughtList';
 import { ADD_FRIEND } from '../utils/mutations';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
-export default () => {
+const Profile = () => {
   const [ addFriend ] = useMutation(ADD_FRIEND);
   const { username: userParam } = useParams();
 
@@ -76,3 +76,5 @@ export default () => {
     </div>
   );
 };
+
+export default Profile;
